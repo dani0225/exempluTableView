@@ -24,8 +24,10 @@ class AlDoileaViewController: UIViewController, UITableViewDelegate, UITableView
     {
        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! AlDoileaTableViewCell
         
-        cell.myImage.image = UIImage(named: (fox2[indexPath.row] + "jpg"))
+        cell.myImage.image = UIImage(named: (animals[indexPath.row] + "jpg"))
         cell.myLabel.text = animals[indexPath.row]
+        
+        return (cell)
     }
     
     
