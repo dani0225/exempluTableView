@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let list = ["Milk","Honey","Bread","Tacos","Milky"]
     
+    let list2 = ["Milk","Honey","Bread","Tacos","Milky"]
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
