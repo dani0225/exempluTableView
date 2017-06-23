@@ -13,6 +13,8 @@
 		842A31A01EFD2AB600DF89FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842A319F1EFD2AB600DF89FC /* Assets.xcassets */; };
 		842A31A31EFD2AB600DF89FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842A31A11EFD2AB600DF89FC /* LaunchScreen.storyboard */; };
 		842A31AB1EFD350B00DF89FC /* AlDoileaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A31AA1EFD350B00DF89FC /* AlDoileaViewController.swift */; };
+		842A31AD1EFD395300DF89FC /* fox2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 842A31AC1EFD395300DF89FC /* fox2.jpg */; };
+		842A31B11EFD3C1900DF89FC /* AlDoileaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A31B01EFD3C1900DF89FC /* AlDoileaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		842A31A21EFD2AB600DF89FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842A31A41EFD2AB600DF89FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842A31AA1EFD350B00DF89FC /* AlDoileaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlDoileaViewController.swift; sourceTree = "<group>"; };
+		842A31AC1EFD395300DF89FC /* fox2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fox2.jpg; sourceTree = "<group>"; };
+		842A31B01EFD3C1900DF89FC /* AlDoileaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlDoileaTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		842A318C1EFD2AB600DF89FC = {
 			isa = PBXGroup;
 			children = (
+				842A31B01EFD3C1900DF89FC /* AlDoileaTableViewCell.swift */,
 				842A31971EFD2AB600DF89FC /* TableView */,
 				842A31961EFD2AB600DF89FC /* Products */,
 			);
@@ -63,6 +68,7 @@
 				842A319F1EFD2AB600DF89FC /* Assets.xcassets */,
 				842A31A11EFD2AB600DF89FC /* LaunchScreen.storyboard */,
 				842A31A41EFD2AB600DF89FC /* Info.plist */,
+				842A31AC1EFD395300DF89FC /* fox2.jpg */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -129,6 +135,7 @@
 			files = (
 				842A31A31EFD2AB600DF89FC /* LaunchScreen.storyboard in Resources */,
 				842A31A01EFD2AB600DF89FC /* Assets.xcassets in Resources */,
+				842A31AD1EFD395300DF89FC /* fox2.jpg in Resources */,
 				842A319E1EFD2AB600DF89FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842A31B11EFD3C1900DF89FC /* AlDoileaTableViewCell.swift in Sources */,
 				842A31AB1EFD350B00DF89FC /* AlDoileaViewController.swift in Sources */,
 				842A319B1EFD2AB600DF89FC /* ViewController.swift in Sources */,
 				842A31991EFD2AB600DF89FC /* AppDelegate.swift in Sources */,
@@ -306,6 +314,7 @@
 				842A31A91EFD2AB600DF89FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

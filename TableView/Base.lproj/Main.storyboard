@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Al Doilea View Controller-->
         <scene sceneID="v7B-2V-4NR">
             <objects>
-                <viewController id="urv-5R-JZP" sceneMemberID="viewController">
+                <viewController id="urv-5R-JZP" customClass="AlDoileaViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dxH-CR-Ihe"/>
                         <viewControllerLayoutGuide type="bottom" id="kzK-e6-RqZ"/>
@@ -65,9 +67,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bH5-aZ-vHE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="239" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bH5-aZ-vHE">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" rowHeight="239" id="wZQ-mm-OoL" customClass="AlDoileaTableViewCell" customModule="TableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="239"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wZQ-mm-OoL" id="Xtq-50-Xt5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="239"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-vT-Fwf">
+                                                    <rect key="frame" x="37" y="32" width="213" height="185"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="dcR-vT-Fwf" secondAttribute="height" multiplier="213:185" id="LDb-zO-sHn"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuv-HS-4W4">
+                                                    <rect key="frame" x="284" y="109" width="112" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="uuv-HS-4W4" secondAttribute="height" multiplier="16:3" id="H3h-cq-PFc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uuv-HS-4W4" secondAttribute="trailing" constant="10" id="QfG-Vm-Iyr"/>
+                                                <constraint firstItem="uuv-HS-4W4" firstAttribute="top" secondItem="Xtq-50-Xt5" secondAttribute="topMargin" constant="101" id="WBC-n4-QDf"/>
+                                                <constraint firstItem="dcR-vT-Fwf" firstAttribute="leading" secondItem="Xtq-50-Xt5" secondAttribute="leadingMargin" constant="29" id="fb3-KP-60f"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uuv-HS-4W4" secondAttribute="bottom" constant="100.67" id="h1P-VG-8o1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dcR-vT-Fwf" secondAttribute="bottom" constant="13.67" id="iWX-TX-Rp9"/>
+                                                <constraint firstItem="dcR-vT-Fwf" firstAttribute="top" secondItem="Xtq-50-Xt5" secondAttribute="topMargin" constant="24" id="n7Q-20-TSb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myImage" destination="dcR-vT-Fwf" id="ybU-Ef-9sE"/>
+                                            <outlet property="myLabel" destination="uuv-HS-4W4" id="cSD-Fc-zh7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="urv-5R-JZP" id="vXz-AX-44U"/>
+                                    <outlet property="delegate" destination="urv-5R-JZP" id="9lo-Ol-FLj"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

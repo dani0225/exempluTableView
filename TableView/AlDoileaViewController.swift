@@ -8,8 +8,28 @@
 
 import UIKit
 
-class AlDoileaViewController: UIViewController {
-
+class AlDoileaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let animals = ["fox2", "fox2", "fox2"]
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return animals.count
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+       let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! AlDoileaTableViewCell
+        
+        cell.myImage.image = UIImage(named: (fox2[indexPath.row] + "jpg"))
+        cell.myLabel.text = animals[indexPath.row]
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
